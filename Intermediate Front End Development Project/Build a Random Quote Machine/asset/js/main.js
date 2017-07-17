@@ -1,24 +1,23 @@
 
 function getQuote() {
-  $.get({
+  $.ajax({
     headers: {
-      "X-Mashape-Key": "OivH71yd3tmshl9YKzFH7BTzBVRQp1RaKLajsnafgL2aPsfP9V",
+      "X-Mashape-Key": "mlYM7UoJzamshqbQAEk26WQp8QTwp1K0lGjjsn3d7qAi3Aq2Xg",
       Accept: "application/json",
       "Content-Type": "application/x-www-form-urlencoded"
     },
-    url: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=1",
+    url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous&count=1',
     success: function(r) {
       if (typeof r === 'string') {
        r = JSON.parse(r); 
       }
-      $('#quote').text(r.quote);
-      $('#author').text(r.author);
+        $('#quote').html(r.quote);
+        $('#author').html(r.author);
     }
-});
-
-    
+  });
+} 
 $(document).ready(function() {
-  getQuote();
+    getQuote();
   $('#new-quote').on('click', getQuote);
     
 });
