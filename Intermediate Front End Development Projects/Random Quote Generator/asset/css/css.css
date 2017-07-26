@@ -1,0 +1,35 @@
+.jumbotron{
+    background-color: #0066cc !important;
+    padding: 20%;
+    
+}
+
+#quote{
+    padding: 5%;
+    text-align: center;
+    font-size: 200%;
+    font-family: sans-serif;
+    color: white;
+}
+
+#author{
+    text-align: center;
+    font-size: 120%;
+    font-family: monospace;
+    color: white;
+}
+.button{
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 130%;
+    font-family: sans-serif;
+    background:#0066cc;
+    color: white;
+    margin: 0 auto;
+}
+
+#by{
+    text-align: center;
+    margin: 10px;
+    font-size: 70%;
+}
