@@ -1,3 +1,4 @@
+var currentQuote = '', currentAuthor = '';
 
 function getQuote() {
   $.ajax({
@@ -11,14 +12,22 @@ function getQuote() {
       if (typeof r === 'string') {
        r = JSON.parse(r); 
       }
-        $('#quote').html('"'+r.quote+'"');
-        $('#author').html("- "+r.author);
+        currentQuote=r.quote;
+        currentAuthor=r.author;
+        $('#quote').text('"'+currentQuote+'"');
+        $('#author').html("- "+currentAuthor);
+        $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+        
     }
   });
 } 
 $(document).ready(function() {
     getQuote();
-  $('#new-quote').on('click', getQuote);
+    $('#new-quote').on('click', getQuote);
+    $('#tweet-quote').on('click', function() {
+      openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor))
+  });
     
+
 });
     
