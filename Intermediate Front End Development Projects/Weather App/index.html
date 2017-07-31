@@ -2,21 +2,28 @@
 <html>
 	<head>
 		<title>Test</title>
-        <link rel = "stylesheet" type = "text/css" href = "asset/css/css.css" />
+        <link rel = "stylesheet" type = "text/css" href = "Main/main.css" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 	</head>
 	<body>
-        <div class="col-sm-12">
-            <p><span id="title"></span></p>
-            <p><span id="temp"></span></p>
-            <p><span id="condition"></span></p>
-            <p><span id="windSpeed"></span></p>
-            <p><span id="humidity"></span></p>
-        </div>    
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 main-title">
+                    <p><span id="title"></span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 main-body">
+                    <p><span id="temp"></span></p>
+                    <p><span id="condition"></span></p>
+                    <p><span id="windSpeed"></span></p>
+                    <p><span id="humidity"></span></p>
+                </div>
+            </div>
+        </div>
         <div class="row footer"> 
-            <div class="col-sm-12 center" id="by">by <a href="https://github.com/spradh">spradh</a></div>
+            <div class="col-sm-12" id="by">by <a href="https://github.com/spradh">spradh</a></div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
